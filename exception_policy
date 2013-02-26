@@ -1,0 +1,4 @@
+initialize_domain /usr/bin/firefox from any
+no_initialize_domain /usr/bin/firefox from /usr/lib/lightdm/lightdm/lightdm-guest-session-wrapper
+keep_domain any from /usr/lib/lightdm/lightdm/lightdm-guest-session-wrapper
+keep_domain /usr/lib/firefox/firefox from /usr/lib/firefox/firefox

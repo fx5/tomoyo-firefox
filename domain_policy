@@ -1,0 +1,345 @@
+<kernel> /usr/bin/firefox
+use_profile 3
+
+file execute /usr/bin/which exec.realpath="/bin/which" exec.argv[0]="which"
+file execute /usr/lib/firefox/firefox exec.realpath="/usr/lib/firefox/firefox" exec.argv[0]="/usr/lib/firefox/firefox"
+file read /bin/dash
+file read /usr/lib/firefox/firefox.sh
+misc env \*
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/bin/which
+use_profile 3
+
+file read /bin/dash
+file read /bin/which
+misc env \*
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox
+use_profile 3
+
+file append /home/\*/.mozilla/\{\*\}/\*
+file chmod /home/\*/.config/ibus/bus/ 0700
+file chmod /home/\*/.local/share/recently-used.xbel 0600
+file chmod /home/\*/.mozilla/\{\*\}/ 0755
+file chmod /home/\*/.mozilla/\{\*\}/\* 0644
+file chmod /home/\*/.mozilla/\{\*\}/\*/ 0700
+file chmod /home/\*/Downloads/\* 0664
+file chmod /run/shm/ParseLock\* 0666
+file chmod /tmp/\*.tmp 0600
+file chmod /tmp/gtkprint_\* 0600
+file create /home/\*/.config/gtk-2.0/gtkfilechooser.ini.\* 0666
+file create /home/\*/.local/share/recently-used.xbel.\* 0666
+file create /home/\*/.mozilla/\{\*\}/\* 0600-0666
+file create /home/\*/Downloads/\* 0600
+file create /home/\*/Downloads/\* 0664
+file create /home/\*/Downloads/\{\*\}/\* 0664
+file create /run/shm/pulse-shm-\$ 0400
+file create /run/user/\*/dconf/user 0600
+file create /tmp/\* 0644
+file create /tmp/\* 0700
+file create /tmp/\*/\* 0600
+file create /var/tmp/\* 0600
+file execute /bin/sh
+file execute /usr/bin/eog exec.realpath="/usr/bin/eog" exec.argv[0]="eog"
+file execute /usr/bin/evince exec.realpath="/usr/bin/evince" exec.argv[0]="evince"
+file execute /usr/bin/file-roller exec.realpath="/usr/bin/file-roller" exec.argv[0]="file-roller"
+file execute /usr/bin/firefox
+file execute /usr/bin/gedit exec.realpath="/usr/bin/gedit" exec.argv[0]="gedit"
+file execute /usr/bin/software-center exec.realpath="/usr/share/software-center/software-center" exec.argv[0]="/usr/bin/software-center"
+file execute /usr/lib/firefox/firefox
+file execute /usr/lib/firefox/plugin-container
+file ioctl /dev/ati/card\* 0-0xFFFFFFFF
+file ioctl anon_inode:inotify 0x541B
+file ioctl socket:[family=10:type=1:protocol=6] 0x541B
+file ioctl socket:[family=2:type=1:protocol=6] 0x541B
+file ioctl socket:[family=2:type=2:protocol=17] 0x541B
+file mkdir /home/\*/.mozilla/ 0700
+file mkdir /home/\*/.mozilla/\{\*\}/ 0700
+file mkdir /home/\*/.mozilla/\{\*\}/ 0755
+file mkdir /home/\*/.mozilla/\{\*\}/ 0777
+file mkdir /home/\*/.mozilla/\{\*\}/\* 0777
+file mkdir /home/\*/Downloads/\*/ 0755
+file mkdir /home/\*/Downloads/\{\*\}/ 0755
+file mkdir /tmp/\*/ 0700
+file read /\{\*\}/\*.css
+file read /\{\*\}/\*.gif
+file read /\{\*\}/\*.html
+file read /\{\*\}/\*.jpg
+file read /\{\*\}/\*.js
+file read /\{\*\}/\*.png
+file read /\{\*\}/\*.xml
+file read /dev/ati/card\*
+file read /dev/null
+file read /dev/urandom
+file read /etc/cups/\*
+file read /etc/firefox/\*
+file read /etc/fonts/\{\*\}/\*
+file read /etc/fonts/fonts.conf
+file read /etc/gai.conf
+file read /etc/gnome-vfs-2.0/modules/default-modules.conf
+file read /etc/gnome/defaults.list
+file read /etc/host.conf
+file read /etc/hosts
+file read /etc/ld.so.cache
+file read /etc/lsb-release
+file read /etc/mailcap
+file read /etc/mime.types
+file read /etc/nsswitch.conf
+file read /etc/passwd
+file read /etc/pkcs11/modules/gnome-keyring.module
+file read /etc/pulse/client.conf
+file read /etc/sound/events/\*
+file read /etc/udev/udev.conf
+file read /etc/xul-ext/\*
+file read /home/\*/.ICEauthority
+file read /home/\*/.Xauthority
+file read /home/\*/.cache/event-sound-cache.tdb\*
+file read /home/\*/.cache/fontconfig/\*
+file read /home/\*/.config/dconf/user
+file read /home/\*/.config/gtk-2.0/gtkfilechooser.ini
+file read /home/\*/.config/gtk-2.0/gtkfilechooser.ini.\*
+file read /home/\*/.config/user-dirs.dirs
+file read /home/\*/.cups/\*
+file read /home/\*/.gtk-bookmarks
+file read /home/\*/.gtkrc-2.0
+file read /home/\*/.local/share/\{\*\}/\*
+file read /home/\*/.local/share/applications/mimeapps.list
+file read /home/\*/.local/share/applications/mimeinfo.cache
+file read /home/\*/.local/share/mime/application/x-extension-html.xml
+file read /home/\*/.local/share/mime/mime.cache
+file read /home/\*/.local/share/recently-used.xbel
+file read /home/\*/.local/share/recently-used.xbel.\*
+file read /home/\*/.local/share/unity-webapps/\*
+file read /home/\*/.mime.types
+file read /home/\*/.mozilla/\{\*\}/
+file read /home/\*/.mozilla/\{\*\}/\*
+file read /home/\*/.mozilla/firefox/\{\*\}/\*
+file read /home/\*/.pulse-cookie
+file read /home/\*/Downloads/\*
+file read /home/\*/Downloads/\{\*\}/\*
+file read /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+file read /run/resolvconf/resolv.conf
+file read /run/shm/
+file read /run/shm/ParseLock\*
+file read /run/shm/pulse-shm-\$
+file read /run/user/\*/dconf/user
+file read /tmp/.X\$-lock
+file read /tmp/\*
+file read /tmp/mozilla-\*
+file read /tmp/unity_support_test\*
+file read /usr/lib/\{\*\}/\*
+file read /usr/local/share/applications/defaults.list
+file read /usr/local/share/applications/mimeinfo.cache
+file read /usr/local/share/mime/mime.cache
+file read /usr/share/\{\*\}/\*
+file read /var/cache/fontconfig/\X-le64.cache-3
+file read /var/lib/dbus/machine-id
+file read /var/tmp/\*
+file read proc:/7759/environ
+file read proc:/\$/auxv
+file read proc:/\$/cmdline
+file read proc:/\$/environ
+file read proc:/\$/maps
+file read proc:/\$/status
+file read proc:/ati/major
+file read proc:/cpuinfo
+file read proc:/filesystems
+file read proc:/modules
+file read sysfs:/devices/system/cpu/online
+file read sysfs:/devices/system/cpu/present
+file rename /home/\*/.config/gtk-2.0/gtkfilechooser.ini.\* /home/\*/.config/gtk-2.0/gtkfilechooser.ini
+file rename /home/\*/.local/share/recently-used.xbel.\* /home/\*/.local/share/recently-used.xbel
+file rename /home/\*/.mozilla/\{\*\}/\* /home/\*/.mozilla/\{\*\}/\*
+file rename /home/\*/.mozilla/\{\*\}/\*/ /home/\*/.mozilla/\{\*\}/\*/
+file rmdir /home/\*/.mozilla/\{\*\}/
+file rmdir /tmp/plugtmp/
+file symlink /home/\*/.mozilla/\{\*\}/lock
+file truncate /home/\*/.mozilla/firefox/\{\*\}/\*
+file truncate /home/\*/Downloads/\*
+file truncate /home/\*/Downloads/\{\*\}/\*
+file truncate /run/shm/pulse-shm-\$
+file truncate /tmp/\*
+file truncate /tmp/\*.tmp
+file truncate /tmp/\{\*\}/\*
+file unlink /home/\*/.mozilla/\{\*\}/\*
+file unlink /home/\*/Downloads/\*
+file unlink /run/shm/pulse-shm-\$
+file unlink /tmp/\*
+file unlink /tmp/\{\*\}/\*
+file unlink /tmp/mozilla-\*
+file unlink /var/tmp/\*
+file write /dev/ati/card\$
+file write /dev/null
+file write /home/\*/.cache/event-sound-cache.tdb\*
+file write /home/\*/.config/gtk-2.0/gtkfilechooser.ini.\*
+file write /home/\*/.local/share/recently-used.xbel.\*
+file write /home/\*/.local/share/unity-webapps/\*
+file write /home/\*/.mozilla/\{\*\}/\*
+file write /home/\*/.mozilla/firefox/\{\*\}/\*
+file write /home/\*/.pulse-cookie
+file write /home/\*/Downloads/\*
+file write /home/\*/Downloads/\{\*\}/\*
+file write /run/shm/ParseLock\$
+file write /run/shm/pulse-shm-\$
+file write /run/user/\*/dconf/user
+file write /tmp/\*
+file write /tmp/\{\*\}/\*
+file write /tmp/mozilla-\*
+file write /var/tmp/\*
+misc env \*
+network inet dgram send 0.0.0.0-255.255.255.255 0-65535
+network inet dgram send ::-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff 0-65535
+network inet stream connect 0.0.0.0-255.255.255.255 1-65535
+network inet stream connect ::-ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff 0-65535
+network unix stream connect /run/user/\*/keyring-\*/pkcs11
+network unix stream connect /tmp/pulse-\*/native
+network unix stream connect /var/run/cups/cups.sock
+network unix stream connect /var/run/dbus/system_bus_socket
+network unix stream connect /var/run/nscd/socket
+network unix stream connect \000/tmp/.ICE-unix/\$
+network unix stream connect \000/tmp/.X11-unix/\*
+network unix stream connect \000/tmp/dbus-\*
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /bin/sh
+use_profile 3
+
+misc env \*
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/bin/eog
+use_profile 0
+
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/bin/evince
+use_profile 0
+
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/bin/file-roller
+use_profile 0
+
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/bin/gedit
+use_profile 0
+
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/bin/software-center
+use_profile 0
+
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/lib/firefox/firefox
+use_profile 3
+
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/lib/firefox/plugin-container
+use_profile 3
+
+file append /home/\*/.macromedia/\{\*\}/\*
+file chmod /home/\*/.config/ibus/bus/ 0700
+file create /home/\*/.macromedia/\{\*\}/\* 0666
+file create /run/shm/pulse-shm-\$ 0400
+file create /tmp/Flash\* 0600
+file execute /bin/sh
+file ioctl socket:[family=2:type=2:protocol=17] 0x541B
+file mkdir /home/\*/.adobe/ 0700
+file mkdir /home/\*/.adobe/\*/ 0700
+file mkdir /home/\*/.adobe/\{\*\}/ 0700
+file mkdir /home/\*/.adobe/\{\*\}/\* 0700
+file mkdir /home/\*/.macromedia/ 0700
+file mkdir /home/\*/.macromedia/\{\*\}/ 0700
+file mkdir /home/\*/.macromedia/\{\*\}/\* 0700
+file read /dev/urandom
+file read /etc/fonts/\{\*\}/\*
+file read /etc/fonts/fonts.conf
+file read /etc/host.conf
+file read /etc/hosts
+file read /etc/nsswitch.conf
+file read /etc/passwd
+file read /etc/pulse/client.conf
+file read /etc/vdpau_wrapper.cfg
+file read /home/\*/.Xauthority
+file read /home/\*/.cache/fontconfig/\*
+file read /home/\*/.config/dconf/user
+file read /home/\*/.gtkrc-2.0
+file read /home/\*/.macromedia/\{\*\}/\*
+file read /home/\*/.mozilla/firefox/\*/cert8.db
+file read /home/\*/.mozilla/firefox/\*/key3.db
+file read /home/\*/.mozilla/firefox/\*/prefs.js
+file read /home/\*/.mozilla/firefox/\*/secmod.db
+file read /home/\*/.mozilla/firefox/profiles.ini
+file read /home/\*/.pulse-cookie
+file read /run/resolvconf/resolv.conf
+file read /run/shm/pulse-shm-\$
+file read /run/user/\*/dconf/user
+file read /tmp/Flash\*
+file read /usr/lib/\{\*\}/\*
+file read /usr/share/\{\*\}/\*
+file read /var/cache/fontconfig/\*
+file read /var/lib/dbus/machine-id
+file read proc:/cpuinfo
+file read proc:/filesystems
+file rename /home/\*/.macromedia/\{\*\}/\* /home/\*/.macromedia/\{\*\}/\*
+file truncate /home/\*/.macromedia/\{\*\}/\*
+file truncate /run/shm/pulse-shm-\$
+file truncate /tmp/Flash\*
+file unlink /home/\*/.macromedia/\{\*\}/\*
+file unlink /run/shm/pulse-shm-\$
+file unlink /tmp/Flash\*
+file write /home/\*/.pulse-cookie
+file write /run/shm/pulse-shm-\$
+file write /run/user/\*/dconf/user
+file write /tmp/Flash\*
+misc env \*
+network inet dgram send 0.0.0.0-255.255.255.255 0-65535
+network inet stream connect 0.0.0.0-255.255.255.255 0-65535
+network unix stream connect /tmp/pulse-7aQha7LVKbV6/native
+network unix stream connect /tmp/pulse-\*/native
+network unix stream connect /var/run/nscd/socket
+network unix stream connect \000/tmp/.X11-unix/X\*
+network unix stream connect \000/tmp/dbus-\*
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/lib/firefox/plugin-container /bin/sh
+use_profile 3
+
+file execute /bin/grep exec.realpath="/bin/grep" exec.argv[0]="grep"
+file execute /bin/ps
+misc env \*
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/lib/firefox/plugin-container /bin/sh /bin/grep
+use_profile 3
+
+file read /usr/lib/\{\*\}/\*
+file read /usr/lib/locale/locale-archive
+file read /usr/share/locale-langpack/de/LC_MESSAGES/grep.mo
+misc env \*
+use_group 0
+
+<kernel> /usr/bin/firefox /usr/lib/firefox/firefox /usr/lib/firefox/plugin-container /bin/sh /bin/ps
+use_profile 3
+
+file ioctl /dev/null 0x5413
+file ioctl /home/\*/.xsession-errors 0x5413
+file ioctl pipe:[\$] 0x0-0xFFFFFFFFF
+file read /dev/tty
+file read /usr/lib/locale/locale-archive
+file read /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+file read proc:/\$/cmdline
+file read proc:/\$/stat
+file read proc:/\$/status
+file read proc:/sys/kernel/pid_max
+file read proc:/tty/drivers
+file read proc:/uptime
+file read sysfs:/devices/system/cpu/online
+misc env \*
+use_group 0
+
