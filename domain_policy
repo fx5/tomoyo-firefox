@@ -243,8 +243,11 @@ use_group 0
 use_profile 3
 
 file append /home/\*/.macromedia/\{\*\}/\*
+file append /home/fx5/.adobe/\{\*\}/\*
 file chmod /home/\*/.config/ibus/bus/ 0700
 file create /home/\*/.macromedia/\{\*\}/\* 0666
+file create /home/fx5/.adobe/\{\*\}/\* 0600
+file create /home/fx5/.adobe/\{\*\}/\* 0666
 file create /run/shm/pulse-shm-\$ 0400
 file create /tmp/Flash\* 0600
 file execute /bin/sh
@@ -276,6 +279,7 @@ file read /home/\*/.mozilla/firefox/\*/prefs.js
 file read /home/\*/.mozilla/firefox/\*/secmod.db
 file read /home/\*/.mozilla/firefox/profiles.ini
 file read /home/\*/.pulse-cookie
+file read /home/fx5/.adobe/\{\*\}/\*
 file read /run/resolvconf/resolv.conf
 file read /run/shm/pulse-shm-\$
 file read /run/user/\*/dconf/user
@@ -288,12 +292,15 @@ file read proc:/cpuinfo
 file read proc:/filesystems
 file rename /home/\*/.macromedia/\{\*\}/\* /home/\*/.macromedia/\{\*\}/\*
 file truncate /home/\*/.macromedia/\{\*\}/\*
+file truncate /home/fx5/.adobe/\{\*\}/\*
 file truncate /run/shm/pulse-shm-\$
 file truncate /tmp/Flash\*
 file unlink /home/\*/.macromedia/\{\*\}/\*
+file unlink /home/fx5/.adobe/\{\*\}/\*
 file unlink /run/shm/pulse-shm-\$
 file unlink /tmp/Flash\*
 file write /home/\*/.pulse-cookie
+file write /home/fx5/.adobe/\{\*\}/\*
 file write /run/shm/pulse-shm-\$
 file write /run/user/\*/dconf/user
 file write /tmp/Flash\*
